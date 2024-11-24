@@ -1,0 +1,41 @@
+<div class="p-5 m-5 bg-light">
+    <h3 class="text-center">Book Now</h3>
+    <div class="row my-4">
+        <div class="col-lmg-3 col-sm">
+            <label for="selectRoom">Room Type</label>
+            <select id="roomType" class="form-select" aria-label="select room">
+                <option selected>Select Room</option>
+                {{#each types}}
+                    <option value="{{id}}">{{name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="col-lg-3 col-sm">
+            <label for="startDate">Check-In Date</label>
+            <input id="startDate" class="form-control" type="date" />
+            <span id="startDateSelected"></span>
+        </div>
+        <div class="col-lg-3 col-sm">
+            <label for="endDate">Check-Out Date</label>
+            <input id="endDate" class="form-control" type="date" />
+            <span id="endDateSelected"></span>
+        </div>
+        <div class="col-lg-3 col-sm">
+            <label for="selectRoom"># of Guests</label>
+            <select class="form-select" aria-label="select room">
+                <option selected>Select Qty</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+        </div>
+    </div>
+    <div class="d-md-flex justify-content-md-end">
+        <button type="button" class="btn btn-dark" id="search">Search</button>
+    </div>
+</div>
